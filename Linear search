@@ -1,0 +1,21 @@
+# prompt: generate linear search program take user input
+
+def linear_search(arr, x):
+  for i in range(len(arr)):
+    if arr[i] == x:
+      return i
+  return -1
+
+# Taking user input for the array
+arr = list(map(int, input("Enter array elements separated by spaces: ").split()))
+
+# Taking user input for the element to be searched
+x = int(input("Enter the element to search for: "))
+
+# Function call
+result = linear_search(arr, x)
+
+if result != -1:
+  print("Element is present at index", result)
+else:
+  print("Element is not present in array")
